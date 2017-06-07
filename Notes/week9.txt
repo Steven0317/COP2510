@@ -1,0 +1,87 @@
+Week 9
+	Arrays
+	Ordered list of values
+	- array has a single name
+	- each value has a numeric index
+	- an array of size N is indexed from 0 to N-1
+	- can only store the same value type(int, String)
+ 
+ Is an object and must be instantiated
+ can allocate as much memory as needed for the array
+ 
+	Declaring Arrays
+		int[] scores = new int[10];
+		-the type of variable scores is int[] (an array of integers)
+		- the reference variable "scores" is set to a new object than can hold integers
+	
+	Java provides two ways to declare arrays
+		
+		int[] grades;
+		int grades[];
+		- the first is consistent with other types of declarations
+	
+	EXAMPLES
+	int[] weghts = new int[2000];
+	double[] prices = new double{500};
+	
+	boolean[] flags;
+	flags = new boolean[20];
+	
+	char codes = new char[1750];
+	
+	Accessing Arrays Elements(Values)
+	
+		use the array name followed by the position or index in brackets
+			scores[2]
+			
+		an element can be assigned, used for calculation or printed
+		
+	For loops are effective for manipulating the contents of an array
+		for loops are useful when you know exactly how many times you need to repeat a process
+		the size of this array provides this information
+	
+	*good idea to store a constant that stores the size of the array*
+	
+	For vs for-each loop
+		
+		for(int value : list)
+			system.out.println(value + " ");
+		
+		for (int index = 0; index < LIMIT; index++)
+		System.out.println(list[index] + " ");
+		
+		these two statements are equivalent 
+		
+	Index and Boundries
+		each array has a public constnt cslled length tht stores the size
+			referenced using the array name
+		holds the number of elements, not the largest index
+		
+	Initializer list
+		can be used to fill an array in one step
+		*need to have values in advanced*
+		values are delimited by braces, and seperated bby commas.
+		
+			int[] units = {157,4323,89,944,540,269,34,282,23433};
+			
+			char[] letterGrades = {'A', 'B', 'C', 'D', 'F'};
+			
+			do not skip values can not leave blank spaces in the array
+			
+	Two Dimensional Arrays
+		a table of elements
+	2-D arrays are declared by specifying the size of each dimension 
+	EXAMPLE
+		int[][] = table new int[12][50];
+	an element is refrenced using two index values	
+		table [6][34]
+	the array stored in one row can be specified using one index	
+		table[3]: the array of elemnts table[3][0]
+		table[3][1],...,table[3][49]
+	for each dimension add another nested loop
+	
+	ArrayListClass
+	part of java util.package
+	can change size 
+	can not use primitive data typesslower performance
+	

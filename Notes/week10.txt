@@ -1,0 +1,102 @@
+Review for lab exam 2	
+	lab 7 is vital
+	lab 5(twelve days) specifically
+	open book/notes/canvas material
+	
+1 dimensional array and loops for behavior 
+
+extra credit will be star pattern (10 points)
+
+number sequences will help with the actual test
+	
+
+
+	
+Object Oriented Programming
+	helps us organize a large program into small modules
+	design an intricate program
+	find and remove errors
+	
+Classes
+	can contain data declarations and method declarations
+
+Example-Bank account
+	
+class called account
+	state can include: owners name, acct number, current balance
+	
+	behavior can include: deposits, withdrawals, interest added
+
+private declaration can not access the data directly for security reasons
+
+	first data declarations
+	then method declarations
+
+Driver program
+	drives the use of other more intersting parts of a program
+	used to test other parts of the software
+	
+Constructor
+
+	a special method that is used to set up an object when it is initially created
+	
+	constructors have the smae name as the class
+
+	do not have to define a constructor for a class
+		each class has a default that accepts no arguments(data you recieve from the method)
+	
+example
+	no return type specified in header
+	common error- putting a return type makes it a regular mathod with the same name as the class
+
+Instance Data
+
+	Classes declare the type of the data, but it does not reserve memory space for it
+
+	Whenever an Account object is created;  a name variable is created as well
+UML diagram ==> giant flowchart for creating OOP
+
+Method
+	a method is a named group of statements
+	
+	a method declaration specifies the code that is executed when a method is invoked
+	
+	every method in java is part of a particular class
+
+
+Method - Flow of Control
+	
+	flow begins at main
+		resemebles nested loops situations
+
+Method Header
+
+	declaration begins with a header
+
+	int add(int num1. int num2)
+
+	return type method name (parameter list)
+
+	parameter list specifies the type and name of each parameter
+
+	name of a parameter in the method declaration is called a formal parameter
+
+Method Body
+
+	follows the method headrer
+
+	group of code that defines the method is included here
+
+		int add(int num1, int num2)
+		{
+			int sum = num1 + num 2;
+			
+				return sum;
+		}
+
+Return Statement
+
+	return type of a method indicates the type of value that the method send back to the calling location
+
+	a method that does not return a value has a void return type
+	

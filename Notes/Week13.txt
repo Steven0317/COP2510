@@ -1,0 +1,81 @@
+Week 13
+
+File Input and Output
+
+Reading data from a file you can use 
+	scanner class
+	flie class
+writing data to a file
+	printWriter(Overwrites any file)
+	*fileWriter(Updates the file)
+
+file must be opened
+	creates a connection to the program 
+data is then read or written to the file
+
+file must be closed after finished using it
+	prevents corruption or loss of data
+
+Whats a file
+	Input file- file that a program reads from
+
+	Output file- file a program writes to
+
+	file formats: text(common) or binary 
+
+Reading from a file
+
+	import the scanner and file classes
+	-import java.util.Scanner;
+	-import java.util.io*;
+
+Includes a throws exception clause
+	any method that uses a Scanner object ti read a file must have a throws IOException clause 	in the header
+	
+	public static void manin(String[] args) throws IOException
+Reading from a file
+
+	create a file object
+		- File inputFile = new File("Numbers.txt");
+
+	use scanner class's nextLine to read a line from the file
+	use the Scanner's hasNext method to deterimne if there is more data to read
+
+	when youre done use the scanner's close method to close the file
+		- scan.close
+	make suer the file exists and can be found
+		- create a copy of the file and place it in the directory
+
+Creating a Scanner object pass the reference of the file object as an argument
+	- Scanner scan = new Scanner(inputfile);
+	- Scanner fileScan = new Scanner (new File("urls.inp"));
+
+Writing to a file
+	1) import scanner and file classes
+	2) include a throws expcetion clause
+	3) creste a printWriter object and pass the name of the file as a string to the constructor
+		if file already exists it will overwrite the existsing file
+		
+		-PrintWriter outfile = new PrintWriter("Movies.txt");
+		
+		- String filename = "Movies.txt";
+		  PrintWriter outfile = new PrintWriter(filename);
+	4) use PrintWriter's print and println method to write data to the file
+		-outfile.println(movie);
+	5) close the file
+		outfile.close;
+
+Exceptions
+	when somthing unexpecte happens in a java program, an exception is thrown
+	
+	an exception is an object that descirbes an unusual or erraneous situation
+
+	3 ways to deal with it
+		not at all, terminates abnomrally
+		handle the exception when it occurs
+		handle the exception at another point in the program
+	
+	exceptions are trown so it can be caught nd handled by another part of the program
+	errors are usually unrecoverable and should not be caught
+
+	- use the keyword "throws" to insert a clause and the name of the expected exception 

@@ -1,0 +1,137 @@
+week 11
+
+example in this lecture is a good guide
+
+RE-CAP
+Flow of Control(FOC)
+	when a mehod is called FOC is moved to that method
+	
+	when the method is done FOC is transferred back to where the call is made
+	
+return stement
+		return expression;
+		
+		expression must confrom to the return type
+		
+			int must return int
+
+Parameters
+
+	Formal- name of parameters in header of the method
+	
+	Actual - an invocation, the values pssed into the method
+			actuals values are copied
+			
+			
+	EXAMPLE
+	int num = obj.add(24,192);
+	
+	
+	int add(int num1; int num2)
+	{
+			int sum = num1 + num 2;
+			
+			return sum;
+	}
+	
+Encapsulation
+
+	introduces security
+	
+	internal- details of the variable and the methods of the class that defines it
+	
+	external- the services that an object provides and how the object interacts with the rest of the system
+	
+	from an external view, an object is an encapsulated entity, providing a set of specific services
+		define the interface of the object
+	
+	one object(or client) may inoke the interface methods of another object; which manages the instance data
+	
+	a client may request the services of another object, but it doesnt have to be aware of how those services are achieved
+
+	objects should be self governing
+
+	make it difficult if not impossible to acces another objects variables directly
+
+Visibility Modifiers
+
+	 allows encapsulation
+	 
+	 visibility modifiers are public, private, protected
+		*protected involves inheritance*
+	
+	public can be referenced anywhere
+	
+	private can be referenced only withing a class
+	
+	members without a visibility modifier have a default that can be referenced by any class in the directory
+	
+	Public variables violate encapsulation
+	
+	intance variables should be declared with private visibility
+	
+	Constants may have public visibility
+	
+	Public constants do not violate encapsulation because its value can not be changed
+	
+	public variables = violate encapsulation
+	private variables = enforce encapsulation
+	public methods = provides services to clients
+	private methods = supports other methods in the class
+
+Data Scope
+
+	scope of data is the area of a program which can reference specific data
+	
+	data declared at the class level can be referenced by all class methods
+	
+	data declared within a method can only be used within a method
+
+Local Variables
+
+	formal parameters of a m ethod create automatic variables when a method is invoked
+	
+	when the method is finished, all local variables are destroyed
+	
+	int add(int num1, int num2)
+	{
+		int sum = num1+ num2;		sum is a local variable that is created each time the method i called and desstroyed when it finishes
+		
+		return sum;
+	
+	}
+
+toString
+
+	returns a character string that represents the object
+	 
+	called automatically when an object is concatenated to a string or when passed to a println
+	
+	good practice to define a toString method for a class
+	
+	EXAMPLE
+	public String toString()
+	{
+		NumberFormat fmt = NumberFormat.getcurrencyInstance();
+		return(acctNumber + "/t" + name + "/t" + fmt.format(balance));
+	}
+
+Accessors and Mutators
+
+	accessor methods return the current value of a variable
+		- aka getters; name takes the for of getX where X represents a value
+	
+	Mutator methods change the value of a variable
+		- aka setters, name takes the for of setX
+		
+	ACCESSOR EXAMPLE
+	public double getBalance()
+	{
+		return balance;
+	}
+	
+	MUTATOR EXAMPLE
+	public void setFaceValue(int value)
+	{
+			faceValue = value;
+	}
